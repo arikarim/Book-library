@@ -49,11 +49,13 @@ const addBookDom =  (book) => {
 
   // add book name 
   const bookName = document.createElement('h2');
+  bookName.classList.add('mx-auto');
   bookName.textContent = book.bookname;
   divBook.appendChild(bookName);
 
   // add pages 
   const bookPages = document.createElement('p');
+  bookPages.classList.add('mx-auto');
   bookPages.textContent = book.pagesnum;
   divBook.appendChild(bookPages);
 
@@ -63,6 +65,7 @@ const addBookDom =  (book) => {
   readButton.classList.add('btn');
   readButton.classList.add('btn-success');
   readButton.classList.add('w-50');
+  readButton.classList.add('mx-auto');
   divBook.appendChild(readButton);
 
   // change readbutton status
