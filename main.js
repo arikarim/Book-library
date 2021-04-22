@@ -33,8 +33,8 @@ cancelBook.addEventListener('click',()=>{
 
 
 // create a book
-const addNewBook = (name,pages, read = false) => {
-  bookObj = {bookname: name,pagesnum: pages,status: read};
+const addNewBook = (name, description, pages, read = false) => {
+  bookObj = {bookname: name, bdescription: description, pagesnum: pages,status: read};
   library.push(bookObj);
   addBookDom(bookObj);
 }
@@ -52,6 +52,12 @@ const addBookDom =  (book) => {
   bookName.classList.add('mx-auto');
   bookName.textContent = book.bookname;
   divBook.appendChild(bookName);
+
+  // add description
+  const description = document.createElement('p');
+  description.classList.add('mx-auto');
+  description.textContent = book.bdescription;
+  divBook.appendChild(description);
 
   // add pages 
   const bookPages = document.createElement('p');
@@ -105,8 +111,9 @@ submitButton.addEventListener('click', (e) => {
 
   const bname = document.getElementById('name').value;
   const npages = document.getElementById('pages').value;
+  const bdescription = document.getElementById('description').value;
 
-  addNewBook(bname, npages);
+  addNewBook(bname, bdescription, npages);
   form.reset();
   form.style.display = 'none';
 })
