@@ -79,12 +79,10 @@ submitButton.PreventDefault;
 submitButton.addEventListener('click', (e) => {
   e.preventDefault();
 
-  const name = document.getElementById('name').value;
-  const pages = document.getElementById('pages').value;
+  const bname = document.getElementById('name').value;
+  const npages = document.getElementById('pages').value;
 
-  addNewBook(name, pages);
+  addNewBook(bname, npages);
   form.reset();
-
-  form.style.visibility = 'hidden';
-
+  form.style.display = 'none';
 })
