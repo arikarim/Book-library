@@ -6,9 +6,9 @@ const form = document.querySelector('form');
 form.style.display = 'none';
 
 const addBook = document.getElementById('add-book');
-// addBook.style.visibility = 'visible'
+
 const cancelBook = document.getElementById('close');
-// cancelBook.style.visibility = 'hidden'
+
 
 addBook.addEventListener('click', () => {
   form.style.display = 'block';
