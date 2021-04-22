@@ -61,10 +61,10 @@ const addBookDom =  (book) => {
 
   //create button
   const readButton = document.createElement('button');
-  readButton.textContent = book.read;
+  readButton.textContent = book.status;
   readButton.classList.add('btn');
   readButton.classList.add('btn-success');
-  readButton.classList.add('w-50');
+  readButton.classList.add('w-25');
   readButton.classList.add('mx-auto');
   divBook.appendChild(readButton);
 
@@ -73,9 +73,25 @@ const addBookDom =  (book) => {
   readButton.addEventListener('click',(e) =>{
     if (e.target.textContent == 'false') {
       e.target.textContent = 'true'
-    } else
-    e.target.textContent = 'false'
+    } else {
+      e.target.textContent = 'false'
+    }
   })
+
+    // <button> to remove a book
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'remove';
+    deleteButton.classList.add('btn');
+    deleteButton.classList.add('btn-danger');
+    deleteButton.classList.add('w-25');
+    deleteButton.classList.add('my-2');
+    deleteButton.classList.add('mx-auto');
+    divBook.appendChild(deleteButton);
+
+    //Remove chield divbook from the parent booklist div
+    deleteButton.addEventListener('click',(e)=>{
+        bookList.removeChild(divbook);
+    })
 
   bookList.appendChild(divBook);
 }
