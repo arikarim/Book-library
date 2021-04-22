@@ -43,16 +43,18 @@ const addBookDom =  (book) => {
   // the div
   const divBook = document.createElement('div');
   divBook.classList.add('books');
-
+  divBook.classList.add('d-flex');
+  divBook.classList.add('flex-column');
+  divBook.classList.add('justify-content-center');
 
   // add book name 
   const bookName = document.createElement('h2');
-  bookName.textContent = book.name;
+  bookName.textContent = book.bookname;
   divBook.appendChild(bookName);
 
   // add pages 
   const bookPages = document.createElement('p');
-  bookPages.textContent = book.pages;
+  bookPages.textContent = book.pagesnum;
   divBook.appendChild(bookPages);
 
   //create button
@@ -60,6 +62,7 @@ const addBookDom =  (book) => {
   readButton.textContent = book.read;
   readButton.classList.add('btn');
   readButton.classList.add('btn-success');
+  readButton.classList.add('w-50');
   divBook.appendChild(readButton);
 
   // change readbutton status

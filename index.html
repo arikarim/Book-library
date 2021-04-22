@@ -10,21 +10,30 @@
 </head>
 <body>
   
+  <div class="container">
 
-  <div id="book-list" class="row"></div>
-  <button class="btn btn-info" id="add-book">Add book</button>
-  <form action="" class="form">
+    <div id="book-list" class="row col-6 mx-auto d-flex justify-content-center"></div>
 
-    <div class="close btn btn-warning" id="close">close</div><br>
+    <div class="row d-flex flex-column">
 
-    <label for="name">name</label>
-    <input type="text" name="name" id="name" placeholder="name"><br>
+      <button class="btn w-25 btn-info mx-auto" id="add-book">Add book</button>
+      <form action="" class="form mx-auto col-6">
+    
+        
+        <label for="name">name</label>
+        <input class="form-control" type="text" name="name" id="name" placeholder="name of the book"><br>
+        
+        <label for="pages">pages</label>
+        <input class="form-control"  type="number" name="pages" id="pages" placeholder="number of pages"><br>
+        
+        <div class="my-2 d-flex justify-content-between">
+          <button id="submit-btn" class="submit btn btn-dark" type="submit">submit</button>
+          <div class="close btn btn-warning" id="close">close</div><br>
+        </div>
+      </form>
+    </div>
+  </div>
 
-    <label for="pages">pages</label>
-    <input type="number" name="pages" id="pages" placeholder="pages"><br>
-
-    <button id="submit-btn" class="submit btn btn-dark" type="submit">submit</button>
-  </form>
 
   <script src="main.js"></script>
 </body>
