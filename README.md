@@ -1,6 +1,6 @@
 # Book-library
 
-Book-Library project, a user can create a book with name, description and number of pages.
+In this book-Library project, a user can create a book with a name, description, and number of pages.
 
 ![Hireable](https://img.shields.io/badge/Hireable-yes-success) ![](https://img.shields.io/badge/Mobile--responsive-yes-green) ![](https://img.shields.io/badge/-Microverse%20projects-blueviolet)
 
