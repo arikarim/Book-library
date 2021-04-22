@@ -34,7 +34,7 @@ cancelBook.addEventListener('click',()=>{
 
 // create a book
 const addNewBook = (name,pages, read = false) => {
-  const bookObj = {bookname: name,pagesnum: pages,status: read};
+  bookObj = {bookname: name,pagesnum: pages,status: read};
   library.push(bookObj);
   addBookDom(bookObj);
 }
@@ -47,10 +47,12 @@ const addBookDom =  (book) => {
 
   // add book name 
   const bookName = document.createElement('h2');
+  bookName.textContent = book.name;
   divBook.appendChild(bookName);
 
   // add pages 
   const bookPages = document.createElement('p');
+  bookPages.textContent = book.pages;
   divBook.appendChild(bookPages);
 
   //create button
