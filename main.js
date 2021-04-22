@@ -96,7 +96,7 @@ const addBookDom =  (book) => {
 
     //Remove chield divbook from the parent booklist div
     deleteButton.addEventListener('click',(e)=>{
-        bookList.removeChild(divbook);
+        bookList.removeChild(divBook);
     })
 
   bookList.appendChild(divBook);
